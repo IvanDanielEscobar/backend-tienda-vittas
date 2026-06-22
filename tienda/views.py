@@ -47,6 +47,29 @@ def registro_usuario(request):
         form = RegistroUsuarioForm()
     return render(request, 'tienda/registro.html', {'form': form})
 
+# Inicio de Sesión
+def login_usuario(request):
+    if request.method == 'POST':
+        # El AuthenticationForm recibe 'request' como primer argumento por estándar de Django
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            # Si el formulario es válido, Django ya autenticó las credenciales internamente
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            
+            if user is not None:
+                login(request, user)
+                messages.success(request, f"¡Bienvenido de vuelta, {username}!")
+                return redirect('catalogo')
+        else:
+            # Si las credenciales son incorrectas o el formulario es inválido
+            messages.error(request, "Usuario o contraseña incorrectos. Por favor, intentá de nuevo.")
+    else:
+        form = AuthenticationForm()
+        
+    return render(request, 'tienda/login.html', {'form': form})
+
 # API
 # Listar los productos o filtrar por categoría 
 @api_view(['GET'])
