@@ -15,6 +15,7 @@ class Usuario(AbstractUser):
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, unique=True, verbose_name="Nombre de Categoría")
     descripcion = models.TextField(blank=True, null=True, verbose_name="Descripción")
+    activo = models.BooleanField(default=True, verbose_name="Disponible para la venta")
 
     def __str__(self):
         return self.nombre
@@ -23,6 +24,7 @@ class Categoria(models.Model):
 # tales
 class Talle(models.Model):
     nombre = models.CharField(max_length=50, unique=True, verbose_name="Nombre de Talle")
+    activo = models.BooleanField(default=True, verbose_name="Disponible para la venta")
 
     def __str__(self):
         return self.nombre
@@ -34,7 +36,7 @@ class Producto(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Precio")
     categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="productos", verbose_name="Categoría")
     descripcion = models.TextField(verbose_name="Descripción")
-    talles = models.ManyToManyField(Talle, related_name="productos", verbose_name="Talles Disponibles")
+    talles = models.ManyToManyField(Talle, related_name="productos", verbose_name="Talles Disponibles", blank=True)
     imagen = models.ImageField(upload_to='productos/', verbose_name="Imagen del Producto")
     es_talle_unico = models.BooleanField(default=False, verbose_name="¿Es Talle Único?")
     activo = models.BooleanField(default=True, verbose_name="Disponible para la venta")

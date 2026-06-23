@@ -1,11 +1,12 @@
+
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Producto, Categoria, Talle, Pedido, DetallePedido
-from .forms import RegistroUsuarioForm
+from .forms import RegistroUsuarioForm, ProductoForm
 from .serializers import ProductoSerializer, CategoriaSerializer
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
@@ -47,56 +48,49 @@ def registro_usuario(request):
         form = RegistroUsuarioForm()
     return render(request, 'tienda/registro.html', {'form': form})
 
-# Inicio de Sesión
-def login_usuario(request):
-    if request.method == 'POST':
-        # El AuthenticationForm recibe 'request' como primer argumento por estándar de Django
-        form = AuthenticationForm(request, data=request.POST)
-        if form.is_valid():
-            # Si el formulario es válido, Django ya autenticó las credenciales internamente
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            
-            if user is not None:
-                login(request, user)
-                messages.success(request, f"¡Bienvenido de vuelta, {username}!")
-                return redirect('catalogo')
-        else:
-            # Si las credenciales son incorrectas o el formulario es inválido
-            messages.error(request, "Usuario o contraseña incorrectos. Por favor, intentá de nuevo.")
-    else:
-        form = AuthenticationForm()
-        
-    return render(request, 'tienda/login.html', {'form': form})
+# CRUD de Productos
+class CrearProductoView(PermissionRequiredMixin, CreateView):
+    model = Producto
+    form_class = ProductoForm
+    template_name = 'tienda/form_producto.html'
+    success_url = reverse_lazy('panel_productos')
+    permission_required = 'tienda.add_producto'
 
-# API
-# Listar los productos o filtrar por categoría 
-@api_view(['GET'])
-def api_productos(request):
-    productos = Producto.objects.filter(activo=True)
-    serializer = ProductoSerializer(productos, many=True)
-    return Response(serializer.data)
+    def form_valid(self, form):
+        messages.success(self.request, "Producto creado exitosamente.")
+        return super().form_valid(form)
+    
 
-# Detalle de un producto por ID
-@api_view(['GET'])
-def api_producto_detalle(request, pk):
-    try:
-        producto = Producto.objects.get(pk=pk, activo=True)
-        serializer = ProductoSerializer(producto)
-        return Response(serializer.data)
-    except Producto.DoesNotExist:
-        return Response({'error': 'Producto no encontrado'}, status=404)
+class PanelProductoListView(LoginRequiredMixin, ListView):
+    model = Producto
+    template_name = 'tienda/crud_productos.html'
+    context_object_name = 'productos'
+    ordering = ['-fecha_creacion']
 
-# categorías
-@api_view(['GET'])
-def api_categorias(request):
-    categorias = Categoria.objects.all()
-    serializer = CategoriaSerializer(categorias, many=True)
-    return Response(serializer.data)
+class EditarProductoView(PermissionRequiredMixin, UpdateView):
+    model = Producto
+    form_class = ProductoForm
+    template_name = 'tienda/form_producto.html' 
+    success_url = reverse_lazy('panel_productos')
+    permission_required = 'tienda.change_producto'
 
-# --- CRUD DE CATEGORÍAS ---
+    def form_valid(self, form):
+        messages.success(self.request, "Producto actualizado correctamente.")
+        return super().form_valid(form)
 
+class BorrarProductoView(PermissionRequiredMixin, DeleteView):
+    model = Producto
+    template_name = 'tienda/confirmar_borrado.html' 
+    success_url = reverse_lazy('panel_productos')
+    permission_required = 'tienda.delete_producto'
+
+    def form_valid(self, form):
+        self.object = self.get_object()
+        self.object.activo = False # <-- BORRADO LÓGICO
+        self.object.save()
+        messages.success(self.request, "Producto desactivado del catálogo con éxito.")
+        return redirect(self.get_success_url())
+#CRUD de Categorías 
 class CategoriaListView(LoginRequiredMixin, ListView):
     model = Categoria
     template_name = 'tienda/crud_categorias.html'
@@ -107,7 +101,7 @@ class CategoriaCreateView(PermissionRequiredMixin, CreateView):
     fields = ['nombre', 'descripcion']
     template_name = 'tienda/form_categoria.html'
     success_url = reverse_lazy('crud_categorias')
-    permission_required = 'tienda.add_categoria' # Permiso nativo de Django
+    permission_required = 'tienda.add_categoria'
 
 class CategoriaUpdateView(PermissionRequiredMixin, UpdateView):
     model = Categoria
@@ -122,8 +116,17 @@ class CategoriaDeleteView(PermissionRequiredMixin, DeleteView):
     success_url = reverse_lazy('crud_categorias')
     permission_required = 'tienda.delete_categoria'
 
-
-# --- CRUD DE TALLES ---
+    def form_valid(self, form):
+        self.object = self.get_object()
+        if hasattr(self.object, 'activo'):
+            self.object.activo = False  # <-- BORRADO LÓGICO
+            self.object.save()
+            messages.success(self.request, "Categoría desactivada con éxito.")
+        else:
+            messages.warning(self.request, "Esta categoría no tiene un campo 'activo'. No se pudo desactivar.")
+        return redirect(self.get_success_url())
+    
+# CRUD de talles
 
 class TalleListView(LoginRequiredMixin, ListView):
     model = Talle
@@ -149,3 +152,37 @@ class TalleDeleteView(PermissionRequiredMixin, DeleteView):
     template_name = 'tienda/confirmar_borrado.html'
     success_url = reverse_lazy('crud_talles')
     permission_required = 'tienda.delete_talle'
+
+    def form_valid(self, form):
+        self.object = self.get_object()
+        if hasattr(self.object, 'activo'):
+            self.object.activo = False  # <-- BORRADO LÓGICO
+            self.object.save()
+            messages.success(self.request, "Talle desactivado con éxito.")
+        else:
+            messages.warning(self.request, "Este talle no tiene un campo 'activo'. No se pudo desactivar.")
+        return redirect(self.get_success_url())
+# API
+# Listar los productos o filtrar por categoría 
+@api_view(['GET'])
+def api_productos(request):
+    productos = Producto.objects.filter(activo=True)
+    serializer = ProductoSerializer(productos, many=True)
+    return Response(serializer.data)
+
+# Detalle de un producto por ID
+@api_view(['GET'])
+def api_producto_detalle(request, pk):
+    try:
+        producto = Producto.objects.get(pk=pk, activo=True)
+        serializer = ProductoSerializer(producto)
+        return Response(serializer.data)
+    except Producto.DoesNotExist:
+        return Response({'error': 'Producto no encontrado'}, status=404)
+
+# categorías
+@api_view(['GET'])
+def api_categorias(request):
+    categorias = Categoria.objects.all()
+    serializer = CategoriaSerializer(categorias, many=True)
+    return Response(serializer.data)
