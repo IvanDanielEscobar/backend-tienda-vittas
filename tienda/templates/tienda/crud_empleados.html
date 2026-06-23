@@ -1,0 +1,67 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}Panel de Personal - Vittas{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex justify-between items-center mb-6">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Nómina de Empleados</h1>
+            <p class="text-sm text-gray-500 mt-1">Gestión interna de roles, accesos y legajos de la firma.</p>
+        </div>
+        <a href="{% url 'crear_empleado' %}" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-colors duration-150 flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+            Dar de alta personal
+        </a>
+    </div>
+
+    <div class="bg-white shadow-sm border border-gray-100 rounded-lg overflow-hidden">
+        <table class="min-w-full divide-y divide-gray-200 text-sm">
+            <thead class="bg-gray-50 font-medium text-gray-500 text-left">
+                <tr>
+                    <th class="px-6 py-3">Usuario / Legajo</th>
+                    <th class="px-6 py-3">Nombre Completo</th>
+                    <th class="px-6 py-3">Contacto</th>
+                    <th class="px-6 py-3">Roles Activos</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-700">
+                {% for empleado in empleados %}
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 font-mono font-medium text-indigo-600 text-xs">{{ empleado.username }}</td>
+                        <td class="px-6 py-4 font-medium text-gray-900">{{ empleado.get_full_name|default:empleado.username }}</td>
+                        <td class="px-6 py-4">
+                            <div class="text-xs text-gray-900 font-semibold">{{ empleado.email }}</div>
+                            <div class="text-xs text-gray-400 mt-0.5">{{ empleado.telefono|default:"Sin teléfono" }}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap space-x-1">
+                            {% for grupo in empleado.groups.all %}
+                                <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+                                    {{ grupo.name }}
+                                </span>
+                            {% empty %}
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-amber-50 text-amber-700">
+                                    Sin roles asignados
+                                </span>
+                            {% endfor %}
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right space-x-3 text-xs font-semibold">
+                            {% if perms.tienda.change_usuario %}
+                                <a href="{% url 'editar_empleado' empleado.id %}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
+                            {% endif %}
+                            
+                            {% if empleado.is_active and perms.tienda.delete_usuario %}
+                                <a href="{% url 'borrar_empleado' empleado.id %}" class="text-red-600 hover:text-red-900">Desactivar</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4" class="text-center py-8 text-gray-400">No hay cuentas de empleados registradas todavía.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

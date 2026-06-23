@@ -1,0 +1,59 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}Alta de Personal - Vittas{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto my-12 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+    <div class="text-center mb-8">
+        <span class="px-3 py-1 text-xs font-bold bg-indigo-50 text-indigo-700 rounded-full uppercase tracking-wider">Módulo de Seguridad</span>
+        <h2 class="text-2xl font-extrabold text-gray-900 mt-2">Registrar Nuevo Empleado</h2>
+        <p class="text-sm text-gray-500 mt-1">La cuenta se enlazará de manera directa al sistema RBAC de grupos combinados.</p>
+    </div>
+    
+    <form method="post" class="space-y-6">
+        {% csrf_token %}
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {% for field in form %}
+                {% if field.name != 'puestos' %}
+                    <div class="{% if field.name == 'direccion' or field.name == 'email' %}sm:col-span-2{% endif %}">
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <p class="text-red-500 text-xs mt-1">{{ field.errors.0 }}</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-4">
+            <label class="block text-sm font-bold text-gray-800 mb-3">{{ form.puestos.label }}</label>
+            <div class="space-y-2">
+                {% for checkbox in form.puestos %}
+                    <label class="flex items-start p-2 rounded hover:bg-gray-100 transition-colors cursor-pointer text-sm">
+                        <div class="flex items-center h-5">
+                            {{ checkbox.tag }}
+                        </div>
+                        <div class="ml-3 text-sm leading-5 text-gray-700">
+                            {{ checkbox.choice_label }}
+                        </div>
+                    </label>
+                {% endfor %}
+            </div>
+            {% if form.puestos.errors %}
+                <p class="text-red-500 text-xs mt-1">{{ form.puestos.errors.0 }}</p>
+            {% endif %}
+        </div>
+        
+        <div class="flex justify-end space-x-3 pt-4 border-t border-gray-100 mt-6">
+            <a href="{% url 'crud_empleados' %}" class="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                Cancelar
+            </a>
+            <button type="submit" class="bg-indigo-600 text-white hover:bg-indigo-700 px-4 py-2 rounded-lg text-sm font-medium shadow-sm transition-colors">
+                Dar de Alta Empleado
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
