@@ -23,16 +23,16 @@ Bash
 ## 📸 Capturas del Sistema en Funcionamiento
 
 ### 1. Catálogo de Prendas
-![Catálogo Público](https://github.com/user-attachments/assets/c3086233-6f7c-4d6b-8df2-e8be13adbd0b)
+https://github.com/user-attachments/assets/c3086233-6f7c-4d6b-8df2-e8be13adbd0b
 
 ### 2. Panel de Gestión de Productos (Control de Catálogo)
-![Panel de Gestión de Productos](https://github.com/user-attachments/assets/61648a41-4d9e-4227-b218-4a46953d1034)
+https://github.com/user-attachments/assets/61648a41-4d9e-4227-b218-4a46953d1034
 
 ### 3. Formulario de Carga
-![Formulario de Carga](https://github.com/user-attachments/assets/a1359f3b-2b0f-4a1d-ae48-24ce9d982506)
+(https://github.com/user-attachments/assets/a1359f3b-2b0f-4a1d-ae48-24ce9d982506
 
 ### 4. Panel de Administración
-![Panel de Administración](https://github.com/user-attachments/assets/5123a41c-f588-429e-b48e-b862f93118da)
+https://github.com/user-attachments/assets/5123a41c-f588-429e-b48e-b862f93118da
 
 # Vittas Indumentaria - Sistema de Gestión E-Commerce
 
