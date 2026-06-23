@@ -134,4 +134,4 @@ CORS_ALLOW_CREDENTIALS = True
 AUTH_USER_MODEL = 'tienda.Usuario'
 
 LOGIN_REDIRECT_URL = 'catalogo'
-LOGOUT_REDIRECT_URL = 'catalogo'
+LOGOUT_REDIRECT_URL = 'login'
