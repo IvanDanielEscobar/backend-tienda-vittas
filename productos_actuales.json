@@ -1,0 +1,116 @@
+[
+{
+    "model": "tienda.producto",
+    "pk": 1,
+    "fields": {
+        "nombre": "Blusa Roma Seda",
+        "precio": "58000.00",
+        "categoria": 1,
+        "descripcion": "Blusa de seda italiana con caída fluida y cuello mao. Un básico elevado para cualquier ocasión.",
+        "imagen": "productos/BlusaRomaSeda.jpeg",
+        "es_talle_unico": true,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.815Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 2,
+    "fields": {
+        "nombre": "Top Crochet Toscana",
+        "precio": "42000.00",
+        "categoria": 1,
+        "descripcion": "Top tejido artesanalmente en hilo de algodón premium. Ideal para días de sol.",
+        "imagen": "productos/TopCrochetToscana.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.826Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 3,
+    "fields": {
+        "nombre": "Camisa Linen Amalfi",
+        "precio": "65000.00",
+        "categoria": 1,
+        "descripcion": "Camisa de lino 100% con botones de nácar. Frescura y elegancia natural.",
+        "imagen": "productos/CamisaLinenAmalfi.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.841Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 4,
+    "fields": {
+        "nombre": "Pantallón Palazzo Brindisi",
+        "precio": "72000.00",
+        "categoria": 2,
+        "descripcion": "Talle alto y botamanga ancha. Confeccionado en crepe de alta densidad.",
+        "imagen": "productos/PantalonPalazzoBrinsdisi.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.851Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 5,
+    "fields": {
+        "nombre": "Vestido Midi Florence",
+        "precio": "95000.00",
+        "categoria": 3,
+        "descripcion": "Vestido corte midi con estampa floral exclusiva. Espalda descubierta con lazo.",
+        "imagen": "productos/VestidoMidiFlorence.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.867Z",
+        "talles": [
+            3
+        ]
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 6,
+    "fields": {
+        "nombre": "Zapatillas Milano White",
+        "precio": "85000.00",
+        "categoria": 4,
+        "descripcion": "Cuero vacuno premium. Diseño minimalista con suela de goma antideslizante.",
+        "imagen": "productos/ZapatillasMilanoWhite.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.880Z",
+        "talles": [
+            5,
+            6,
+            7,
+            10
+        ]
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 7,
+    "fields": {
+        "nombre": "Kimono Seda Palermo",
+        "precio": "52000.00",
+        "categoria": 1,
+        "descripcion": "Complemento ideal para usar sobre tops o vestidos. Seda pura.",
+        "imagen": "productos/Kimono.png",
+        "es_talle_unico": true,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.895Z",
+        "talles": [
+            1
+        ]
+    }
+}
+]

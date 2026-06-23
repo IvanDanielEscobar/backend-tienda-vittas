@@ -29,4 +29,10 @@ urlpatterns = [
     path('panel/talles/nuevo/', views.TalleCreateView.as_view(), name='crear_talle'),
     path('panel/talles/editar/<int:pk>/', views.TalleUpdateView.as_view(), name='editar_talle'),
     path('panel/talles/borrar/<int:pk>/', views.TalleDeleteView.as_view(), name='borrar_talle'),
+    #empleados
+    path('panel/empleados/', views.ListarEmpleadosView.as_view(), name='crud_empleados'),
+    path('panel/empleados/nuevo/', views.CrearEmpleadoView.as_view(), name='crear_empleado'),
+    path('panel/empleados/editar/<int:pk>/', views.EditarEmpleadoView.as_view(), name='editar_empleado'),
+    path('panel/empleados/borrar/<int:pk>/', views.BorrarEmpleadoView.as_view(), name='borrar_empleado'),
+
 ]

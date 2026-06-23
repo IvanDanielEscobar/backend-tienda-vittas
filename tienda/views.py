@@ -1,16 +1,17 @@
 
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import login, get_user_model
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Producto, Categoria, Talle, Pedido, DetallePedido
-from .forms import RegistroUsuarioForm, ProductoForm
+from .forms import EmpleadoForm, RegistroUsuarioForm, ProductoForm
 from .serializers import ProductoSerializer, CategoriaSerializer
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
+Usuario = get_user_model()
 # Create your views here.
 # Inicio
 class CatalogoView(ListView):
@@ -162,6 +163,65 @@ class TalleDeleteView(PermissionRequiredMixin, DeleteView):
         else:
             messages.warning(self.request, "Este talle no tiene un campo 'activo'. No se pudo desactivar.")
         return redirect(self.get_success_url())
+    
+
+
+# crud empleados
+class SuperuserRequiredMixin(PermissionRequiredMixin):
+    def test_func(self):
+        return self.request.user.is_superuser
+    
+class ListarEmpleadosView(LoginRequiredMixin, SuperuserRequiredMixin, ListView):
+    model = Usuario
+    template_name = 'tienda/crud_empleados.html'
+    context_object_name = 'empleados'
+    permission_required = 'tienda.view_usuario'
+
+    def get_queryset(self):
+        # Filtramos para no mostrar clientes ni a vos mismo en la lista de empleados
+        return Usuario.objects.filter(is_staff=True).exclude(id=self.request.user.id)
+
+class CrearEmpleadoView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
+    model = Usuario 
+    form_class = EmpleadoForm
+    template_name = 'tienda/form_empleado.html'
+    success_url = reverse_lazy('panel_productos')
+    permission_required = 'tienda.add_usuario'
+    
+    def test_func(self):
+        return self.request.user.is_superuser
+
+    def form_valid(self, form):
+        messages.success(self.request, "Cuenta de empleado Vittas creada con éxito.")
+        return super().form_valid(form)
+    
+
+class EditarEmpleadoView(LoginRequiredMixin, SuperuserRequiredMixin, UpdateView):
+    model = Usuario
+    form_class = EmpleadoForm
+    template_name = 'tienda/form_empleado.html' # Reutiliza el mismo template limpio de alta
+    success_url = reverse_lazy('crud_empleados')
+    permission_required = 'tienda.change_usuario'
+
+    def form_valid(self, form):
+        messages.success(self.request, "Legajo de empleado actualizado correctamente.")
+        return super().form_valid(form)
+
+
+class BorrarEmpleadoView(LoginRequiredMixin, SuperuserRequiredMixin, UpdateView):
+    model = Usuario
+    fields = []
+    template_name = 'tienda/confirmar_borrado.html'
+    success_url = reverse_lazy('crud_empleados')
+    permission_required = 'tienda.delete_usuario'
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.is_active = False  # <-- DESACTIVACION LOGICA
+        self.object.save()
+        messages.success(request, f"La cuenta de {self.object.username} fue dada de baja del sistema.")
+        return redirect(self.success_url)
+
 # API
 # Listar los productos o filtrar por categoría 
 @api_view(['GET'])
