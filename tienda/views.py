@@ -1,11 +1,13 @@
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import permission_required, login_required
 from django.contrib.auth import login, get_user_model
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .models import Producto, Categoria, Talle, Pedido, DetallePedido
+from .models import Producto, Categoria, Talle, Pedido, DetallePedido, VarianteProducto
 from .forms import EmpleadoForm, RegistroUsuarioForm, ProductoForm
 from .serializers import ProductoSerializer, CategoriaSerializer
 from django.urls import reverse_lazy
@@ -14,10 +16,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 Usuario = get_user_model()
 # Create your views here.
 # Inicio
-class CatalogoView(ListView):
+class CatalogoView(LoginRequiredMixin, ListView):
     model = Producto
     template_name = 'tienda/catalogo.html'
     context_object_name = 'productos'
+
     
     def get_queryset(self):
         # Solo productos activos
@@ -91,6 +94,8 @@ class BorrarProductoView(PermissionRequiredMixin, DeleteView):
         self.object.save()
         messages.success(self.request, "Producto desactivado del catálogo con éxito.")
         return redirect(self.get_success_url())
+
+
 #CRUD de Categorías 
 class CategoriaListView(LoginRequiredMixin, ListView):
     model = Categoria
@@ -126,9 +131,9 @@ class CategoriaDeleteView(PermissionRequiredMixin, DeleteView):
         else:
             messages.warning(self.request, "Esta categoría no tiene un campo 'activo'. No se pudo desactivar.")
         return redirect(self.get_success_url())
-    
-# CRUD de talles
 
+
+# CRUD de talles
 class TalleListView(LoginRequiredMixin, ListView):
     model = Talle
     template_name = 'tienda/crud_talles.html'
@@ -221,6 +226,24 @@ class BorrarEmpleadoView(LoginRequiredMixin, SuperuserRequiredMixin, UpdateView)
         self.object.save()
         messages.success(request, f"La cuenta de {self.object.username} fue dada de baja del sistema.")
         return redirect(self.success_url)
+
+@login_required
+@permission_required('tienda.change_producto', raise_exception=True)
+@require_POST
+def actualizar_stock_variante(request, variante_id):
+    variante = get_object_or_404(VarianteProducto, id=variante_id)
+    nuevo_stock = request.POST.get('stock')
+    
+    if nuevo_stock is not None:
+        try:
+            variante.stock = int(nuevo_stock)
+            variante.save()
+            messages.success(request, f"Stock de {variante.producto.nombre} (Talle {variante.talle.nombre}) actualizado a {variante.stock}.")
+        except ValueError:
+            messages.error(request, "El valor ingresado para el stock no es válido.")
+            
+    # Redirecciona de vuelta al detalle usando el nombre exacto de tu URL
+    return redirect('detalle_producto', pk=variante.producto.id)
 
 # API
 # Listar los productos o filtrar por categoría 

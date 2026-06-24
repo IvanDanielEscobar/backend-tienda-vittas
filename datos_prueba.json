@@ -1,0 +1,1713 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-06-22T23:44:55.070Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Kimono Seda Palermo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Talles Disponibles\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-06-22T23:45:54.396Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "Zapatillas Milano White",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Talles Disponibles\", \"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2026-06-22T23:46:34.373Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Vestido Midi Florence",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Talles Disponibles\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2026-06-22T23:46:45.584Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Vestido Midi Florence",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Talles Disponibles\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2026-06-22T23:49:28.510Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Pantallón Palazzo Brindisi",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2026-06-22T23:49:43.457Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Vestido Midi Florence",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2026-06-22T23:50:02.215Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Pantallón Palazzo Brindisi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2026-06-22T23:50:15.093Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Camisa Linen Amalfi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2026-06-22T23:50:26.916Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Top Crochet Toscana",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2026-06-22T23:50:40.815Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Blusa Roma Seda",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2026-06-22T23:52:36.726Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Kimono Seda Palermo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2026-06-23T00:47:27.404Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Top Crochet Toscana",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"variante producto\", \"object\": \"Top Crochet Toscana - Talle: M (Stock: 0)\", \"fields\": [\"Stock para este talle\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2026-06-23T03:11:37.554Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "25",
+        "object_repr": "Zapatillas Retro Venice",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2026-06-23T03:11:52.092Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "24",
+        "object_repr": "Zapatillas Sport Chic",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2026-06-23T03:12:03.046Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "23",
+        "object_repr": "Zapatillas Platform Cloud",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2026-06-23T03:12:12.759Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "22",
+        "object_repr": "Sneakers Gold Detail",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2026-06-23T03:12:21.854Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "21",
+        "object_repr": "Zapatillas Urban Sand",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2026-06-23T03:12:32.124Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "20",
+        "object_repr": "Vestido Boho Turín",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2026-06-23T03:12:42.797Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "19",
+        "object_repr": "Vestido Short Portofino",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2026-06-23T03:12:51.099Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "Vestido Knit Verona",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2026-06-23T03:13:07.507Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "17",
+        "object_repr": "Vestido Gala Milán",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2026-06-23T03:13:22.324Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "16",
+        "object_repr": "Vestido Camisero Siena",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2026-06-23T03:13:29.376Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "15",
+        "object_repr": "Pantalón Cargo Silk",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2026-06-23T03:13:39.953Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "14",
+        "object_repr": "Short Sastrero Bari",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2026-06-23T03:13:55.265Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "Pantalón Slouchy Lucca",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2026-06-23T03:14:03.199Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "Chupín Elastic Positano",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2026-06-23T03:14:11.237Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "Jean Straight Capri",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2026-06-23T03:14:19.558Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "Blusa Night Star",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2026-06-23T03:14:30.035Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "Body Lace Noir",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2026-06-23T03:14:40.076Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "Blusa Volados Venecia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen del Producto\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 3,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 3,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 3,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 3,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 2,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 2,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 2,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 2,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add categoria",
+        "content_type": 6,
+        "codename": "add_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change categoria",
+        "content_type": 6,
+        "codename": "change_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete categoria",
+        "content_type": 6,
+        "codename": "delete_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view categoria",
+        "content_type": 6,
+        "codename": "view_categoria"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add talle",
+        "content_type": 10,
+        "codename": "add_talle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change talle",
+        "content_type": 10,
+        "codename": "change_talle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete talle",
+        "content_type": 10,
+        "codename": "delete_talle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view talle",
+        "content_type": 10,
+        "codename": "view_talle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 11,
+        "codename": "add_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 11,
+        "codename": "change_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 11,
+        "codename": "delete_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 11,
+        "codename": "view_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add pedido",
+        "content_type": 8,
+        "codename": "add_pedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change pedido",
+        "content_type": 8,
+        "codename": "change_pedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete pedido",
+        "content_type": 8,
+        "codename": "delete_pedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view pedido",
+        "content_type": 8,
+        "codename": "view_pedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add producto",
+        "content_type": 9,
+        "codename": "add_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change producto",
+        "content_type": 9,
+        "codename": "change_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete producto",
+        "content_type": 9,
+        "codename": "delete_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view producto",
+        "content_type": 9,
+        "codename": "view_producto"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add detalle pedido",
+        "content_type": 7,
+        "codename": "add_detallepedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change detalle pedido",
+        "content_type": 7,
+        "codename": "change_detallepedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete detalle pedido",
+        "content_type": 7,
+        "codename": "delete_detallepedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view detalle pedido",
+        "content_type": 7,
+        "codename": "view_detallepedido"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add variante producto",
+        "content_type": 12,
+        "codename": "add_varianteproducto"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change variante producto",
+        "content_type": 12,
+        "codename": "change_varianteproducto"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete variante producto",
+        "content_type": 12,
+        "codename": "delete_varianteproducto"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view variante producto",
+        "content_type": 12,
+        "codename": "view_varianteproducto"
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "Administradores",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "Vendedores",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+        "name": "Cajeros",
+        "permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "tienda",
+        "model": "categoria"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "tienda",
+        "model": "detallepedido"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "tienda",
+        "model": "pedido"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "tienda",
+        "model": "producto"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "tienda",
+        "model": "talle"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "tienda",
+        "model": "usuario"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "tienda",
+        "model": "varianteproducto"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "gpx7dojreik9zkvd0r6raev05bvrhb4w",
+    "fields": {
+        "session_data": ".eJxVjDEOAiEQRe9CbcggYwBLe89AhhmQVQPJslsZ766bbKHtf-_9l4q0LjWuI89xEnVWRh1-t0T8yG0Dcqd265p7W-Yp6U3ROx362iU_L7v7d1Bp1G-dAB0WOSJRCAaoFCtixXsmCWABMhjgxJRMtgG9cxjwlIRdQGGf1fsD8-04Wg:1wbrLg:OziDtuHcoitjrqFgLy8jhNvyyM2ZbTS--n50c6zge7k",
+        "expire_date": "2026-07-07T02:58:52.511Z"
+    }
+},
+{
+    "model": "tienda.usuario",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$GqNwi5swj8fietaHn3wROQ$33sBJTh5U9MzHyoqPPqXYIF5ymqoKmzC+GyYvTdFBJw=",
+        "last_login": "2026-06-23T22:39:26.206Z",
+        "is_superuser": true,
+        "username": "ivanadmin",
+        "first_name": "",
+        "last_name": "",
+        "email": "ivan@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-22T23:13:02.162Z",
+        "telefono": "",
+        "direccion": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$yEZboUwBRTXXPpE5ZjFQ6v$10IzkZwwf5XZEcnEQJLFHx+MkdsDvdxryi5gLwg5md8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jorgito",
+        "first_name": "jorge",
+        "last_name": "berne",
+        "email": "jorge@berne.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-23T02:39:35.391Z",
+        "telefono": "12346789",
+        "direccion": "siempre viva 111",
+        "groups": [
+            1,
+            2
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$h08qKtRY5myCGQ4VGERYsJ$AIW8CX7hbPxO4Nb9ER6sh2E6Nc2nUClI1NI1nh22E24=",
+        "last_login": "2026-06-23T22:38:51.007Z",
+        "is_superuser": false,
+        "username": "pili",
+        "first_name": "pilar",
+        "last_name": "esco",
+        "email": "pilar@esco.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-23T02:57:19.077Z",
+        "telefono": "12346789",
+        "direccion": "siempre viva 1112",
+        "groups": [
+            2,
+            3
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.usuario",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$bRSDteAI5LiB85hbsIuFvz$1xK9FYJmzehdEoP+y+YIpUbk2tfmRvzHGe3N8UzvTMY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "joni",
+        "first_name": "jonatan",
+        "last_name": "bravo",
+        "email": "joni@bravo.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-23T22:40:56.367Z",
+        "telefono": "123131132",
+        "direccion": "paraiso 1",
+        "groups": [
+            1,
+            2,
+            3
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 1,
+    "fields": {
+        "nombre": "Blusas",
+        "descripcion": null,
+        "activo": true
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 2,
+    "fields": {
+        "nombre": "Pantalones",
+        "descripcion": null,
+        "activo": true
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 3,
+    "fields": {
+        "nombre": "Vestidos",
+        "descripcion": null,
+        "activo": true
+    }
+},
+{
+    "model": "tienda.categoria",
+    "pk": 4,
+    "fields": {
+        "nombre": "Calzado",
+        "descripcion": null,
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 1,
+    "fields": {
+        "nombre": "Único",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 2,
+    "fields": {
+        "nombre": "S",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 3,
+    "fields": {
+        "nombre": "M",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 4,
+    "fields": {
+        "nombre": "L",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 5,
+    "fields": {
+        "nombre": "36",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 6,
+    "fields": {
+        "nombre": "38",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 7,
+    "fields": {
+        "nombre": "40",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 8,
+    "fields": {
+        "nombre": "42",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 9,
+    "fields": {
+        "nombre": "37",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.talle",
+    "pk": 10,
+    "fields": {
+        "nombre": "39",
+        "activo": true
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 1,
+    "fields": {
+        "nombre": "Blusa Roma Seda",
+        "precio": "58000.00",
+        "categoria": 1,
+        "descripcion": "Blusa de seda italiana con caída fluida y cuello mao. Un básico elevado para cualquier ocasión.",
+        "imagen": "productos/BlusaRomaSeda.jpeg",
+        "es_talle_unico": true,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.815Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 2,
+    "fields": {
+        "nombre": "Top Crochet Toscana",
+        "precio": "42000.00",
+        "categoria": 1,
+        "descripcion": "Top tejido artesanalmente en hilo de algodón premium. Ideal para días de sol.",
+        "imagen": "productos/TopCrochetToscana.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.826Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 3,
+    "fields": {
+        "nombre": "Camisa Linen Amalfi",
+        "precio": "65000.00",
+        "categoria": 1,
+        "descripcion": "Camisa de lino 100% con botones de nácar. Frescura y elegancia natural.",
+        "imagen": "productos/CamisaLinenAmalfi.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.841Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 4,
+    "fields": {
+        "nombre": "Pantallón Palazzo Brindisi",
+        "precio": "72000.00",
+        "categoria": 2,
+        "descripcion": "Talle alto y botamanga ancha. Confeccionado en crepe de alta densidad.",
+        "imagen": "productos/PantalonPalazzoBrinsdisi.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.851Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 5,
+    "fields": {
+        "nombre": "Vestido Midi Florence",
+        "precio": "95000.00",
+        "categoria": 3,
+        "descripcion": "Vestido corte midi con estampa floral exclusiva. Espalda descubierta con lazo.",
+        "imagen": "productos/VestidoMidiFlorence.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.867Z",
+        "talles": [
+            3
+        ]
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 6,
+    "fields": {
+        "nombre": "Zapatillas Milano White",
+        "precio": "85000.00",
+        "categoria": 4,
+        "descripcion": "Cuero vacuno premium. Diseño minimalista con suela de goma antideslizante.",
+        "imagen": "productos/ZapatillasMilanoWhite.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.880Z",
+        "talles": [
+            5,
+            6,
+            7,
+            10
+        ]
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 7,
+    "fields": {
+        "nombre": "Kimono Seda Palermo",
+        "precio": "52000.00",
+        "categoria": 1,
+        "descripcion": "Complemento ideal para usar sobre tops o vestidos. Seda pura.",
+        "imagen": "productos/Kimono.png",
+        "es_talle_unico": true,
+        "activo": true,
+        "fecha_creacion": "2026-06-22T02:34:37.895Z",
+        "talles": [
+            1
+        ]
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 8,
+    "fields": {
+        "nombre": "Blusa Volados Venecia",
+        "precio": "49000.00",
+        "categoria": 1,
+        "descripcion": "Detalles de volados en mangas y cuello. Romanticismo italiano en cada costura.",
+        "imagen": "productos/BlusaVoladosVenecia.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.868Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 9,
+    "fields": {
+        "nombre": "Body Lace Noir",
+        "precio": "38000.00",
+        "categoria": 1,
+        "descripcion": "Body de encaje delicado con forrería interna. Perfecto para looks nocturnos.",
+        "imagen": "productos/BodyLaceNoir.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.912Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 10,
+    "fields": {
+        "nombre": "Blusa Night Star",
+        "precio": "46000.00",
+        "categoria": 1,
+        "descripcion": "Gasa con sutiles brillos. Ideal para cenas y cócteles.",
+        "imagen": "productos/BlusaNightStar.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.917Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 11,
+    "fields": {
+        "nombre": "Jean Straight Capri",
+        "precio": "68000.00",
+        "categoria": 2,
+        "descripcion": "Denim rígido premium con lavado vintage. Calce recto clásico.",
+        "imagen": "productos/JeanStraightCapri.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.922Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 12,
+    "fields": {
+        "nombre": "Chupín Elastic Positano",
+        "precio": "62000.00",
+        "categoria": 2,
+        "descripcion": "Gabardina satinada con gran elasticidad. Comodidad absoluta para el día a día.",
+        "imagen": "productos/ChupinElasticPositano.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.927Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 13,
+    "fields": {
+        "nombre": "Pantalón Slouchy Lucca",
+        "precio": "75000.00",
+        "categoria": 2,
+        "descripcion": "Corte slouchy con pinzas frontales. Tendencia y sofisticación en color arena.",
+        "imagen": "productos/PantalonSlouchyLucca.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.933Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 14,
+    "fields": {
+        "nombre": "Short Sastrero Bari",
+        "precio": "45000.00",
+        "categoria": 2,
+        "descripcion": "Short con pinzas y cinturón incluido. La pieza clave del verano.",
+        "imagen": "productos/ShortSastreroBari.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.939Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 15,
+    "fields": {
+        "nombre": "Pantalón Cargo Silk",
+        "precio": "77000.00",
+        "categoria": 2,
+        "descripcion": "Corte cargo pero en tela satinada. Lo urbano se vuelve elegante.",
+        "imagen": "productos/PantalonCargoSilk.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.944Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 16,
+    "fields": {
+        "nombre": "Vestido Camisero Siena",
+        "precio": "88000.00",
+        "categoria": 3,
+        "descripcion": "Lino mezclado con viscosa para evitar arrugas. Un look todoterreno.",
+        "imagen": "productos/VestidoCamiseroSiena.jpeg",
+        "es_talle_unico": true,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.948Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 17,
+    "fields": {
+        "nombre": "Vestido Gala Milán",
+        "precio": "145000.00",
+        "categoria": 3,
+        "descripcion": "Vestido largo de satén con tajo lateral. Elegancia máxima para eventos.",
+        "imagen": "productos/VestidoGalaMilan.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.952Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 18,
+    "fields": {
+        "nombre": "Vestido Knit Verona",
+        "precio": "79000.00",
+        "categoria": 3,
+        "descripcion": "Vestido tejido al cuerpo con cuello polera sutil. Calidez y estilo.",
+        "imagen": "productos/VestidoVerona.png",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.955Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 19,
+    "fields": {
+        "nombre": "Vestido Short Portofino",
+        "precio": "67000.00",
+        "categoria": 3,
+        "descripcion": "Vestido corto con mangas abullonadas y nido de abeja en el pecho.",
+        "imagen": "productos/VestidoPortfino.png",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.960Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 20,
+    "fields": {
+        "nombre": "Vestido Boho Turín",
+        "precio": "93000.00",
+        "categoria": 3,
+        "descripcion": "Falta con mucho vuelo y bordados étnicos en el escote.",
+        "imagen": "productos/VestidoBoho.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.963Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 21,
+    "fields": {
+        "nombre": "Zapatillas Urban Sand",
+        "precio": "78000.00",
+        "categoria": 4,
+        "descripcion": "Tonos tierra y texturas combinadas. Comodidad para todo el día.",
+        "imagen": "productos/ZapatosUrbanSand.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.966Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 22,
+    "fields": {
+        "nombre": "Sneakers Gold Detail",
+        "precio": "92000.00",
+        "categoria": 4,
+        "descripcion": "Zapatillas urbanas con detalles en oro rosa metalizado.",
+        "imagen": "productos/GoldDetail.png",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.968Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 23,
+    "fields": {
+        "nombre": "Zapatillas Platform Cloud",
+        "precio": "89000.00",
+        "categoria": 4,
+        "descripcion": "Suela con plataforma de 4cm. Livianas y ultra cómodas.",
+        "imagen": "productos/ZapatillasPlatfornCloud.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.971Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 24,
+    "fields": {
+        "nombre": "Zapatillas Sport Chic",
+        "precio": "82000.00",
+        "categoria": 4,
+        "descripcion": "La mezcla perfecta entre lo deportivo y lo sofisticado.",
+        "imagen": "productos/SportChic.png",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.976Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.producto",
+    "pk": 25,
+    "fields": {
+        "nombre": "Zapatillas Retro Venice",
+        "precio": "87000.00",
+        "categoria": 4,
+        "descripcion": "Estilo retro de los 80s con materiales modernos y duraderos.",
+        "imagen": "productos/ZapatillaRetroVerde.jpeg",
+        "es_talle_unico": false,
+        "activo": true,
+        "fecha_creacion": "2026-06-23T03:10:16.979Z",
+        "talles": []
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 1,
+    "fields": {
+        "producto": 1,
+        "talle": 1,
+        "stock": 8
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 2,
+    "fields": {
+        "producto": 2,
+        "talle": 2,
+        "stock": 4
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 3,
+    "fields": {
+        "producto": 2,
+        "talle": 3,
+        "stock": 0
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 4,
+    "fields": {
+        "producto": 3,
+        "talle": 2,
+        "stock": 5
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 5,
+    "fields": {
+        "producto": 3,
+        "talle": 3,
+        "stock": 5
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 6,
+    "fields": {
+        "producto": 3,
+        "talle": 4,
+        "stock": 3
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 7,
+    "fields": {
+        "producto": 4,
+        "talle": 5,
+        "stock": 2
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 8,
+    "fields": {
+        "producto": 4,
+        "talle": 6,
+        "stock": 4
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 9,
+    "fields": {
+        "producto": 4,
+        "talle": 7,
+        "stock": 3
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 10,
+    "fields": {
+        "producto": 4,
+        "talle": 8,
+        "stock": 1
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 11,
+    "fields": {
+        "producto": 5,
+        "talle": 2,
+        "stock": 2
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 12,
+    "fields": {
+        "producto": 5,
+        "talle": 3,
+        "stock": 3
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 13,
+    "fields": {
+        "producto": 5,
+        "talle": 4,
+        "stock": 1
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 14,
+    "fields": {
+        "producto": 6,
+        "talle": 5,
+        "stock": 2
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 15,
+    "fields": {
+        "producto": 6,
+        "talle": 9,
+        "stock": 4
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 16,
+    "fields": {
+        "producto": 6,
+        "talle": 6,
+        "stock": 5
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 17,
+    "fields": {
+        "producto": 6,
+        "talle": 10,
+        "stock": 3
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 18,
+    "fields": {
+        "producto": 6,
+        "talle": 7,
+        "stock": 2
+    }
+},
+{
+    "model": "tienda.varianteproducto",
+    "pk": 19,
+    "fields": {
+        "producto": 7,
+        "talle": 1,
+        "stock": 4
+    }
+}
+]
