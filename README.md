@@ -1,21 +1,22 @@
 🚀 Instrucciones de Ejecución en Local
+
 Para replicar el entorno de desarrollo y levantar el servidor de pruebas:
 
 Clonar el repositorio y posicionarse en la carpeta raíz.
 
 Activar el entorno virtual de Python:
 
-Bash
+```Bash
     source .venv/bin/activate
-    ```
+```
 3.  **Instalar las dependencias** requeridas:
 ```bash
     pip install -r requirements.txt
-    ```
+```
 4.  **Iniciar el servidor** de desarrollo:
 ```bash
     python3 manage.py runserver
-    ```
+```
 5.  Acceder a la plataforma desde el navegador web en `http://127.0.0.1:8000/`.
 
 ---
@@ -23,16 +24,16 @@ Bash
 ## 📸 Capturas del Sistema en Funcionamiento
 
 ### 1. Catálogo de Prendas
-https://github.com/user-attachments/assets/c3086233-6f7c-4d6b-8df2-e8be13adbd0b
+![Catálogo de Prendas](https://github.com/user-attachments/assets/c3086233-6f7c-4d6b-8df2-e8be13adbd0b)
 
 ### 2. Panel de Gestión de Productos (Control de Catálogo)
-https://github.com/user-attachments/assets/61648a41-4d9e-4227-b218-4a46953d1034
+![Panel de Gestión de Productos](https://github.com/user-attachments/assets/61648a41-4d9e-4227-b218-4a46953d1034)
 
 ### 3. Formulario de Carga
-https://github.com/user-attachments/assets/a1359f3b-2b0f-4a1d-ae48-24ce9d982506
+![Formulario de Carga](https://github.com/user-attachments/assets/a1359f3b-2b0f-4a1d-ae48-24ce9d982506)
 
 ### 4. Panel de Administración
-https://github.com/user-attachments/assets/5123a41c-f588-429e-b48e-b862f93118da
+![Panel de Administración](https://github.com/user-attachments/assets/5123a41c-f588-429e-b48e-b862f93118da) 
 
 # Vittas Indumentaria - Sistema de Gestión E-Commerce
 
@@ -71,3 +72,8 @@ Sistema integral de gestión de catálogo, control de stock y administración de
 │   │   ├── form_categorias.html # Formulario de gestión para agrupaciones de catálogo
 │   │   └── form_talle.html     # Formulario de alta para la matriz de talles de ropa
 │   └── views.py                # Controladores (Vistas Basadas en Clases con Mixins de seguridad)
+```
+
+### Integrantes:
+# Escobar Ivan
+# Villavicencio Jonatan
