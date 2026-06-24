@@ -70,7 +70,39 @@
                             {{ producto.descripcion }}
                         </p>
                     </div>
+                </div> <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-3">
+                    <h3 class="text-sm font-bold text-gray-800 uppercase tracking-wider">Disponibilidad por Talle</h3>
+                    
+                    <div class="space-y-2">
+                        {% for variante in producto.variantes.all %}
+                            <div class="flex items-center justify-between bg-white p-2.5 rounded-lg border border-gray-200 shadow-sm">
+                                <span class="font-semibold text-gray-700 text-sm">Talle: {{ variante.talle.nombre }}</span>
+                                
+                                {% if perms.tienda.change_producto %}
+                                    <form action="{% url 'actualizar_stock_variante' variante.id %}" method="POST" class="flex items-center space-x-2">
+                                        {% csrf_token %}
+                                        <input type="number" name="stock" value="{{ variante.stock }}" min="0" 
+                                            class="w-20 px-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-center font-medium">
+                                        <button type="submit" class="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-xs font-semibold transition-colors shadow-sm">
+                                            Guardar
+                                        </button>
+                                    </form>
+                                {% else %}
+                                    {% if variante.stock > 0 %}
+                                        <span class="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-semibold">{{ variante.stock }} disp.</span>
+                                    {% else %}
+                                        <span class="text-xs bg-red-50 text-red-500 px-2.5 py-1 rounded-full font-semibold">Sin stock</span>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        {% empty %}
+                            <p class="text-xs text-gray-400 italic">Este producto no cuenta con talles asociados en el sistema.</p>
+                        {% endfor %}
+                    </div>
                 </div>
+
+                <div class="space-y-4 pt-4 border-t border-gray-100">
+                    <div class="flex items-center text-sm text-gray-500">
 
                 <div class="space-y-4 pt-4 border-t border-gray-100">
                     <div class="flex items-center text-sm text-gray-500">

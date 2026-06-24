@@ -6,6 +6,7 @@ urlpatterns = [
     # pag principales
     path('', views.CatalogoView.as_view(), name='catalogo'),
     path('producto/<int:pk>/', views.ProductoDetalleView.as_view(), name='detalle_producto'),
+    path('variante/<int:variante_id>/actualizar-stock/', views.actualizar_stock_variante, name='actualizar_stock_variante'),
     #autenticaciones
     path('registro/', views.registro_usuario, name='registro'),
     path('login/', auth_views.LoginView.as_view(template_name='tienda/login.html'), name='login'),
