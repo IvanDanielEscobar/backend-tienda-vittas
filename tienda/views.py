@@ -94,6 +94,8 @@ class BorrarProductoView(PermissionRequiredMixin, DeleteView):
         self.object.save()
         messages.success(self.request, "Producto desactivado del catálogo con éxito.")
         return redirect(self.get_success_url())
+
+
 #CRUD de Categorías 
 class CategoriaListView(LoginRequiredMixin, ListView):
     model = Categoria
@@ -129,9 +131,9 @@ class CategoriaDeleteView(PermissionRequiredMixin, DeleteView):
         else:
             messages.warning(self.request, "Esta categoría no tiene un campo 'activo'. No se pudo desactivar.")
         return redirect(self.get_success_url())
-    
-# CRUD de talles
 
+
+# CRUD de talles
 class TalleListView(LoginRequiredMixin, ListView):
     model = Talle
     template_name = 'tienda/crud_talles.html'
